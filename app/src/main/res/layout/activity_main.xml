@@ -6,6 +6,12 @@
     <variable
         name="user"
         type="com.example.ViewModel.User" />
+    <variable
+        name="student"
+        type="com.example.ViewModel.Student" />
+    <variable
+        name="handlers"
+        type="com.example.ViewModel.MyHandler" />
 </data>
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
@@ -16,10 +22,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@{user.firstName}"
+        android:onClick="@{handlers::clickedText}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="83dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@{student.name}"
+        android:onClick="@{handlers::clickedStudent}"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp" />
 
 </android.support.constraint.ConstraintLayout>
 </layout>
